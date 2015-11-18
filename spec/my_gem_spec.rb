@@ -8,18 +8,18 @@ describe MyGem do
 
   context "# almacenamiento de las coordenadas" do
     it "Se almacena correctamente la coordenada X" do
-      p1 = MyGem::Point.new(1,1)
+      p1 = Point::Point.new(1,1)
       expect(p1.x).to eq(1)
     end
     it "Se almacena correctamente la coordenada Y" do
-      p1 = MyGem::Point.new(1,1)
+      p1 = Point::Point.new(1,1)
       expect(p1.y).to eq(1)
     end
   end # context
 
   context "# producto por un escalar" do
     before :each do
-      @p1 = MyGem::Point.new(1,1)
+      @p1 = Point::Point.new(1,1)
     end    
     
     it "la coordenada x y la coordenada y se multiplican por el valor" do
@@ -36,7 +36,7 @@ describe MyGem do
   
   context "# opuesto de un punto" do
     it "la coordenada x y la coordenada y se multiplican por menos uno" do
-      p1 = MyGem::Point.new(1,1)
+      p1 = Point::Point.new(1,1)
       p2 = - p1 
       expect(p2.x).to eq(-1)
       expect(p2.y).to eq(-1)
@@ -45,7 +45,7 @@ describe MyGem do
   
   context "# suma de dos puntos " do
     it "coordenada x = original.x + otro.x, coordenada y = original.y + otro.y " do
-      p1 = MyGem::Point.new(1,1) 
+      p1 = Point::Point.new(1,1) 
       p2 = p1 + p1
       expect(p2.x).to eq(2)
       expect(p2.y).to eq(2)
@@ -54,11 +54,11 @@ describe MyGem do
   
   context "# comparaciones entre dos puntos basada en su distancia al origen" do
     before :each do
-       @p1 = MyGem::Point.new(1,1)
-       @p2 = MyGem::Point.new(2,2)
-       @p3 = MyGem::Point.new(1,0)
-       @p4 = MyGem::Point.new(0,1)
-       @pm = MyGem::Point.new(false,nil)
+       @p1 = Point::Point.new(1,1)
+       @p2 = Point::Point.new(2,2)
+       @p3 = Point::Point.new(1,0)
+       @p4 = Point::Point.new(0,1)
+       @pm = Point::Point.new(false,nil)
     end
     it "El punto (1,1) es menor que el punto (2,2)" do
       expect(@p1 < @p2).to eq(true)
@@ -91,11 +91,11 @@ describe MyGem do
 
  context "# haciendo el punto enumerable" do
     before :each do
-       @p1 = MyGem::Point.new(1,1)
-       @p2 = MyGem::Point.new(2,2)
-       @p3 = MyGem::Point.new(1,0)
-       @p4 = MyGem::Point.new(0,1)
-       @pm = MyGem::Point.new(false,nil)
+       @p1 = Point::Point.new(1,1)
+       @p2 = Point::Point.new(2,2)
+       @p3 = Point::Point.new(1,0)
+       @p4 = Point::Point.new(0,1)
+       @pm = Point::Point.new(false,nil)
     end
     it "comprobrando el metodo all? con un bloque vacio" do
       expect(@p1.all?).to eq(true)
