@@ -1,5 +1,5 @@
 require 'spec_helper'
-require 'point'
+require 'my_gem'
 
 describe MyGem do
   it 'has a version number' do
