@@ -37,3 +37,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request
+
+[![Build Status](https://travis-ci.org/jaglez/my-gem.svg?branch=master)](https://travis-ci.org/jaglez/my-gem)
+
+[![Coverage Status](https://coveralls.io/repos/jaglez/my-gem/badge.svg?branch=master&service=github)](https://coveralls.io/github/jaglez/my-gem?branch=master)
